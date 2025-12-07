@@ -1,0 +1,218 @@
+.gallery {
+  padding: 2rem;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 600px;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #667eea;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.carousel-btn-prev {
+  left: 20px;
+}
+
+.carousel-btn-next {
+  right: 20px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #667eea;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.indicator:hover {
+  background: rgba(102, 126, 234, 0.3);
+  transform: scale(1.2);
+}
+
+.indicator.active {
+  background: #667eea;
+  width: 30px;
+  border-radius: 6px;
+}
+
+/* Frase/Quote */
+.gallery-quote {
+  max-width: 800px;
+  margin: 4rem auto 0;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  border-radius: 20px;
+  border-left: 4px solid #667eea;
+  position: relative;
+}
+
+.quote-icon {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  color: #667eea;
+  line-height: 1;
+  opacity: 0.3;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+}
+
+.quote-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #333;
+  line-height: 1.8;
+  margin: 1rem 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-author {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    padding: 1rem;
+  }
+
+  .gallery-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .carousel-slides {
+    height: 400px;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .carousel-btn-prev {
+    left: 10px;
+  }
+
+  .carousel-btn-next {
+    right: 10px;
+  }
+
+  .gallery-quote {
+    padding: 2rem 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .quote-icon {
+    font-size: 4rem;
+    top: 0.5rem;
+    left: 1rem;
+  }
+
+  .quote-text {
+    font-size: 1.2rem;
+  }
+
+  .quote-author {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slides {
+    height: 300px;
+  }
+
+  .carousel-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+
+  .gallery-quote {
+    padding: 1.5rem 1rem;
+  }
+
+  .quote-text {
+    font-size: 1.1rem;
+  }
+}
+

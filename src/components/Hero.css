@@ -1,0 +1,107 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  position: relative;
+  animation: fadeInUp 1s ease-out;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-subtitle-top {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.hero-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 10rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.hero-date-display {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-top: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 1.5rem;
+  }
+
+  .hero-subtitle-top {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+  }
+
+  .hero-name {
+    font-size: 8rem;
+    margin: 0.5rem 0;
+  }
+
+  .hero-date-display {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 6rem;
+  }
+
+  .hero-subtitle-top {
+    font-size: 1rem;
+  }
+
+  .hero-date-display {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,140 @@
+.footer {
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+  color: #333;
+  padding: 2rem;
+  position: relative;
+  overflow: visible;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-content {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #667eea;
+  margin-bottom: 1.5rem;
+}
+
+.contact-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-line p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.whatsapp-link {
+  margin-left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #25D366 0%, #20BA5A 100%);
+  border-radius: 999px;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  white-space: nowrap;
+}
+
+.whatsapp-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  background: linear-gradient(135deg, #20BA5A 0%, #25D366 100%);
+}
+
+.whatsapp-link svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  margin: 1.5rem 0;
+  border-top: 1px solid rgba(102, 126, 234, 0.2);
+  color: #999;
+  font-size: 0.95rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-line {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .contact-line p {
+    font-size: 1rem;
+  }
+
+  .whatsapp-link {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-line p {
+    font-size: 0.95rem;
+  }
+
+  .whatsapp-link {
+    padding: 0.625rem;
+    font-size: 0.9rem;
+  }
+
+  .whatsapp-link svg {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,196 @@
+.gifts {
+  padding: 2rem;
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gifts-content {
+  text-align: center;
+  background: white;
+  padding: 4rem 3rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.gifts-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  color: #667eea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border-radius: 50%;
+}
+
+.gifts-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.gifts-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bank-info {
+  margin-top: 2rem;
+}
+
+.bank-card {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 2px solid rgba(102, 126, 234, 0.1);
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.bank-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+}
+
+.bank-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.bank-item:last-child {
+  border-bottom: none;
+}
+
+.bank-label {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.bank-value {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bank-value.copy-value {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.bank-value.copy-value:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+}
+
+.bank-value.copy-value svg {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.bank-value.copy-value:hover svg {
+  opacity: 1;
+}
+
+.gifts-placeholder {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 2px dashed #e0e0e0;
+}
+
+.gifts-placeholder p {
+  font-size: 1rem;
+  color: #999;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .gifts {
+    padding: 1rem;
+  }
+
+  .gifts-content {
+    padding: 3rem 2rem;
+  }
+
+  .gifts-title {
+    font-size: 2rem;
+  }
+
+  .gifts-subtitle {
+    font-size: 1rem;
+  }
+
+  .bank-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .bank-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .bank-value {
+    width: 100%;
+    word-break: break-all;
+  }
+}
+
+@media (max-width: 480px) {
+  .gifts-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .gifts-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+  }
+
+  .gifts-title {
+    font-size: 1.75rem;
+  }
+
+  .bank-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .bank-title {
+    font-size: 1.3rem;
+  }
+}
+
