@@ -44,6 +44,8 @@ function EventInfo({
                   <span>Fecha</span>
                 </span>
                 <span className="info-value">{date}</span>
+              </div>
+              <div className="info-item">
                 <span className="info-label">
                   <ClockIcon />
                   <span>Hora</span>

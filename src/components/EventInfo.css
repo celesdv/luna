@@ -34,7 +34,7 @@
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
@@ -107,7 +107,7 @@
 
 /* Main Card - Fecha, Hora, Lugar */
 .main-card {
-  grid-column: span 2;
+  /* Todas las cards ocupan 1 columna en desktop */
 }
 
 .info-item {
@@ -199,8 +199,9 @@
 
 
 @media (max-width: 1024px) {
-  .main-card {
-    grid-column: span 1;
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 

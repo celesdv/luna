@@ -18,7 +18,7 @@ function Playlist({ spotifyPlaylistUrl }) {
           </div>
           <h2 className="playlist-title">¿Tenés una canción que no puede faltar?</h2>
           <p className="playlist-subtitle">Agregá tu canción favorita a nuestra playlist</p>
-          
+
           {spotifyPlaylistUrl ? (
             <a
               href={spotifyPlaylistUrl}

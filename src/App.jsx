@@ -23,12 +23,12 @@ function App() {
     dressCode: "Elegante casual",
     dressCodeDescription: "Vestite cómodo pero elegante, para que te sientas cómodo y puedas bailar.",
     // URL de la playlist de Spotify para agregar canciones
-    spotifyPlaylistUrl: null, // Ejemplo: "https://open.spotify.com/playlist/..."
+    spotifyPlaylistUrl: "https://open.spotify.com/playlist/5cC9DxYM35vAB5RCnbwDz6?si=1b28da72d9af4d28", // Ejemplo: "https://open.spotify.com/playlist/..."
     // Datos bancarios para regalos
-    bankName: null, // Ejemplo: "Banco Nación"
-    accountHolder: null, // Ejemplo: "Luna Pérez"
-    cbu: null, // Ejemplo: "1234567890123456789012"
-    alias: null, // Ejemplo: "LUNA.XV.2026"
+    bankName: "Banco Nación", // Ejemplo: "Banco Nación"
+    accountHolder: "Romina Campana", // Ejemplo: "Luna Pérez"
+    cbu: "0000000000000000000000", // Ejemplo: "1234567890123456789012"
+    alias: "LUNA.XV.2026", // Ejemplo: "LUNA.XV.2026"
     contactPhone: "+54 9 263 475 0617",
     // Ruta a la imagen de fondo (puede ser local o URL)
     // Por ahora usa un placeholder, cuando tengas la foto reemplázala
