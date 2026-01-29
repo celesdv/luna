@@ -1,3 +1,15 @@
+:root {
+  /* Colores principales del tema - pueden ser personalizados */
+  --color-primary: #667eea;
+  --color-secondary: #764ba2;
+  --color-accent: #f093fb;
+  --color-text-primary: #333;
+  --color-text-secondary: #666;
+  --color-text-light: #999;
+  --color-background: #ffffff;
+  --color-background-alt: #f8f9fa;
+}
+
 .App {
   width: 100%;
   overflow-x: hidden;

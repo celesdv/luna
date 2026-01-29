@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import './RSVP.css';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 function RSVP() {
+  const [formRef, formVisible] = useScrollAnimation();
   const [formData, setFormData] = useState({
     name: '',
     attending: null, // null, true (sí), false (no)
     guests: '1',
-    phone: '',
-    message: ''
+    specialMenu: '',
+    otherMenu: ''
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -46,8 +48,8 @@ function RSVP() {
         name: '',
         attending: null,
         guests: '1',
-        phone: '',
-        message: ''
+        specialMenu: '',
+        otherMenu: ''
       });
     }, 4000);
   };
@@ -55,7 +57,7 @@ function RSVP() {
   return (
     <section className="rsvp" id="rsvp">
       <div className="container">
-        <h2 className="section-title">Confirma tu Asistencia</h2>
+        <h2 className="section-title fade-down visible">Confirma tu Asistencia</h2>
         <p className="rsvp-subtitle">¿Vas a venir a celebrar con nosotros?</p>
 
         {submitted ? (
@@ -70,7 +72,11 @@ function RSVP() {
             <p className="success-subtext">¡Te esperamos!</p>
           </div>
         ) : (
-          <form className="rsvp-form" onSubmit={handleSubmit}>
+          <form 
+            ref={formRef}
+            className={`rsvp-form zoom-in ${formVisible ? 'visible' : ''}`}
+            onSubmit={handleSubmit}
+          >
             <div className="form-group">
               <label htmlFor="name">Nombre Completo *</label>
               <input
@@ -123,29 +129,44 @@ function RSVP() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="phone">Teléfono *</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
+              <label htmlFor="specialMenu">Menú Especial (opcional)</label>
+              <select
+                id="specialMenu"
+                name="specialMenu"
+                value={formData.specialMenu}
                 onChange={handleChange}
-                required
-                placeholder="+54 9 11 1234-5678"
-              />
+              >
+                <option value="">Sin restricciones</option>
+                <option value="vegetariano">Vegetariano</option>
+                <option value="vegano">Vegano</option>
+                <option value="celiaco">Celíaco (sin gluten)</option>
+                <option value="intolerante-lactosa">Intolerante a la lactosa</option>
+                <option value="otro">Otro</option>
+              </select>
             </div>
 
-            <div className="form-group">
-              <label htmlFor="message">Mensaje (opcional)</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows="4"
-                placeholder="Déjanos un mensaje especial..."
-              />
-            </div>
+            {formData.specialMenu && formData.specialMenu !== '' && (
+              <div className="form-group">
+                <label htmlFor="otherMenu">
+                  {formData.specialMenu === 'otro' 
+                    ? 'Especifica la restricción alimentaria *' 
+                    : 'Detalles adicionales (opcional)'}
+                </label>
+                <textarea
+                  id="otherMenu"
+                  name="otherMenu"
+                  value={formData.otherMenu}
+                  onChange={handleChange}
+                  rows="3"
+                  placeholder={
+                    formData.specialMenu === 'otro'
+                      ? 'Ej: Alérgico a frutos secos, pescado, mariscos...'
+                      : 'Ej: 2 de 4 invitados son celíacos, especifica alergias adicionales...'
+                  }
+                  required={formData.specialMenu === 'otro'}
+                />
+              </div>
+            )}
 
             <button type="submit" className="submit-btn">
               <span>Confirmar</span>

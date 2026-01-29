@@ -1,6 +1,6 @@
 .footer {
-  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
-  color: #333;
+  background: linear-gradient(to bottom, var(--color-background) 0%, var(--color-background-alt) 100%);
+  color: var(--color-text-primary);
   padding: 2rem;
   position: relative;
   overflow: visible;
@@ -28,7 +28,7 @@
   font-size: 2rem;
   font-weight: 400;
   font-style: italic;
-  color: #667eea;
+  color: var(--color-primary);
   margin-bottom: 1.5rem;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .contact-line p {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.6;
   font-size: 1.1rem;
   margin: 0;
@@ -81,8 +81,8 @@
   text-align: center;
   padding-top: 1.5rem;
   margin: 1.5rem 0;
-  border-top: 1px solid rgba(102, 126, 234, 0.2);
-  color: #999;
+  border-top: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+  color: var(--color-text-light);
   font-size: 0.95rem;
 }
 

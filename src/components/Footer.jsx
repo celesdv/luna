@@ -1,6 +1,8 @@
 import './Footer.css';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 function Footer({ contactPhone = "+54 9 11 1234-5678" }) {
+  const [footerRef, footerVisible] = useScrollAnimation();
   // Formatear el número para WhatsApp (eliminar espacios, +, guiones)
   const formatPhoneForWhatsApp = (phone) => {
     return phone.replace(/[\s\+\-\(\)]/g, '');
@@ -10,7 +12,10 @@ function Footer({ contactPhone = "+54 9 11 1234-5678" }) {
 
   return (
     <footer className="footer">
-      <div className="container">
+      <div 
+        ref={footerRef}
+        className={`container fade-up ${footerVisible ? 'visible' : ''}`}
+      >
         <div className="footer-content">
           <div className="footer-section">
             <div className="contact-line">

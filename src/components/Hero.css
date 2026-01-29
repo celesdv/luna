@@ -1,5 +1,6 @@
 .hero {
   height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +45,7 @@
 }
 
 .hero-subtitle-top {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 4px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -54,7 +55,7 @@
 
 .hero-name {
   font-family: 'Great Vibes', cursive;
-  font-size: 10rem;
+  font-size: 15rem;
   font-weight: 400;
   margin: 0.5rem 0;
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
@@ -82,7 +83,7 @@
   }
 
   .hero-name {
-    font-size: 8rem;
+    font-size: 12rem;
     margin: 0.5rem 0;
   }
 
@@ -94,11 +95,12 @@
 
 @media (max-width: 480px) {
   .hero-name {
-    font-size: 6rem;
+    font-size: 10rem;
   }
 
   .hero-subtitle-top {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .hero-date-display {
