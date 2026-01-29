@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './RSVP.css';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
-function RSVP() {
+function RSVP({ contactPhone = "+54 9 11 1234-5678" }) {
   const [formRef, formVisible] = useScrollAnimation();
   const [formData, setFormData] = useState({
     name: '',
@@ -12,6 +12,11 @@ function RSVP() {
     otherMenu: ''
   });
   const [submitted, setSubmitted] = useState(false);
+
+  // Format phone number for WhatsApp
+  const formatPhoneForWhatsApp = (phone) => {
+    return phone.replace(/[\s\+\-\(\)]/g, '');
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -35,13 +40,38 @@ function RSVP() {
       return;
     }
 
-    // Aquí puedes agregar la lógica para enviar el formulario
-    console.log('Datos del formulario:', formData);
+    // Build WhatsApp message
+    let message = `*Confirmación de Asistencia - XV Años de Luna*\n\n`;
+    message += `*Nombre:* ${formData.name}\n`;
+    message += `*Asistencia:* ${formData.attending ? 'Sí asistiré ✓' : 'No podré asistir ✗'}\n`;
+    
+    if (formData.attending) {
+      message += `*Número de invitados:* ${formData.guests}\n`;
+      
+      if (formData.specialMenu && formData.specialMenu !== '') {
+        const menuLabels = {
+          'vegetariano': 'Vegetariano',
+          'vegano': 'Vegano',
+          'celiaco': 'Celíaco (sin gluten)',
+          'intolerante-lactosa': 'Intolerante a la lactosa',
+          'otro': 'Otro'
+        };
+        message += `*Menú especial:* ${menuLabels[formData.specialMenu] || formData.specialMenu}\n`;
+        
+        if (formData.otherMenu) {
+          message += `*Detalles:* ${formData.otherMenu}\n`;
+        }
+      }
+    }
 
-    // Simulación de envío exitoso
+    // Open WhatsApp with the message
+    const whatsappUrl = `https://wa.me/${formatPhoneForWhatsApp(contactPhone)}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+
+    // Show success message
     setSubmitted(true);
 
-    // Resetear después de 4 segundos
+    // Reset after 4 seconds
     setTimeout(() => {
       setSubmitted(false);
       setFormData({

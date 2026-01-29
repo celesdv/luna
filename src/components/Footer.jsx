@@ -8,7 +8,8 @@ function Footer({ contactPhone = "+54 9 11 1234-5678" }) {
     return phone.replace(/[\s\+\-\(\)]/g, '');
   };
 
-  const whatsappUrl = `https://wa.me/${formatPhoneForWhatsApp(contactPhone)}`;
+  const defaultMessage = "Hola! Tengo una consulta sobre el evento de XV años de Luna";
+  const whatsappUrl = `https://wa.me/${formatPhoneForWhatsApp(contactPhone)}?text=${encodeURIComponent(defaultMessage)}`;
 
   return (
     <footer className="footer">

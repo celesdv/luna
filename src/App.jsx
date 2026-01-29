@@ -39,7 +39,7 @@ function App() {
     eventDate: "2026-03-27T21:00:00",
     date: "Viernes, 27 de Marzo",
     time: "21:00 hs",
-    location: "Mɑɾíɑ Victσɾiɑ Salón de Eventos", // Nombre del salón
+    location: "María Victória, Salón de Eventos", // Nombre del salón
     address: "Callejón Fernández 730, San Martín, Mendoza", // Dirección del salón
     // URL de Google Maps (opcional, si no se proporciona se genera automáticamente)
     googleMapsUrl: "https://www.google.com/maps?sca_esv=5d794197a6beaa47&sxsrf=ANbL-n7Gok6065ZfwjKCJKkGXVhZHZEsOg:1769648358336&um=1&ie=UTF-8&fb=1&gl=ar&sa=X&geocode=KcmbtTurQ36WMcJSd61b4f5K&daddr=M5570FVI,+Cj%C3%B3n.+Fernandez+602-772,+M5570FVI+San+Mart%C3%ADn,+Mendoza", // Ejemplo: "https://goo.gl/maps/..."
@@ -54,7 +54,8 @@ function App() {
     cbu: "0000003100072679475203", // Ejemplo: "1234567890123456789012"
     alias: "Tarjetaluna15", // Ejemplo: "LUNA.XV.2026"
     alias2: "luna.campana", // Ejemplo: "LUNA.XV.2026"
-    contactPhone: "+54 9 263 475 0617",
+    // contactPhone: "+54 9 263 457 2907",
+    contactPhone: "+54 9 263 462 5679",
     // Ruta a la imagen de fondo (puede ser local o URL)
     // Por ahora usa un placeholder, cuando tengas la foto reemplázala
     backgroundImage: luna4, // Ejemplo: "/images/luna-foto.jpg" o URL
@@ -130,7 +131,7 @@ function App() {
           alias={eventData.alias}
         />
       )}
-      <RSVP />
+      <RSVP contactPhone={eventData.contactPhone} />
       <GiftsMercadoPago alias={eventData.alias2} />
       <Playlist spotifyPlaylistUrl={eventData.spotifyPlaylistUrl} />
       <UploadPhotos uploadPhotosUrl={eventData.uploadPhotosUrl} />
