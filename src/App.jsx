@@ -53,7 +53,7 @@ function App() {
     accountHolder: "Yasmin Lucia Campana", // Ejemplo: "Luna Pérez"
     cbu: "0000003100072679475203", // Ejemplo: "1234567890123456789012"
     alias: "Tarjetaluna15", // Ejemplo: "LUNA.XV.2026"
-    alias2: "celedangelo.mp", // Ejemplo: "LUNA.XV.2026"
+    alias2: "luna.campana", // Ejemplo: "LUNA.XV.2026"
     contactPhone: "+54 9 263 475 0617",
     // Ruta a la imagen de fondo (puede ser local o URL)
     // Por ahora usa un placeholder, cuando tengas la foto reemplázala
@@ -92,8 +92,8 @@ function App() {
   } : {};
 
   return (
-    <div 
-      className="App" 
+    <div
+      className="App"
       style={{
         ...customTheme,
         backgroundImage: `url(${fondo})`,
