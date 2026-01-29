@@ -1,39 +1,23 @@
 import './Gifts.css';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
-const GiftIcon = () => (
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="3" y="8" width="18" height="4" rx="1"></rect>
-    <path d="M12 8v13M3 8V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2M7 8h10"></path>
-    <path d="M7 8L5 4h14l-2 4"></path>
-  </svg>
-);
-
 function Gifts({ bankName = null, accountHolder = null, cbu = null, alias = null, invitationType = 'gift' }) {
   const [contentRef, contentVisible] = useScrollAnimation();
 
   // Check if at least one bank detail is provided
   const hasBankInfo = bankName || accountHolder || cbu || alias;
 
-  // Mensajes según el tipo de invitación
-  const messages = {
-    gift: {
-      title: 'Regalos',
-      subtitle: 'Tu presencia es el mejor regalo, pero si querés hacerle un obsequio a Luna, podés hacer una transferencia'
-    },
-    contribution: {
-      title: 'Tarjeta y Regalos',
-      subtitle: (
-        <>
-          Tu presencia es lo más importante para nosotros.
-          <br />
-          Si querés colaborar con tu tarjeta (sugerido $20.000) o queres hacerle un regalo a Luna, podés hacerlo mediante transferencia
-        </>
-      )
-    }
+  // Mensaje para colaboración con tarjeta
+  const cardMessage = {
+    title: 'Tarjeta',
+    subtitle: (
+      <>
+        Valor de la tarjeta: $25.000
+        <br />
+        Gracias por tu colaboración.
+      </>
+    )
   };
-
-  const currentMessages = messages[invitationType] || messages.contribution;
 
   return (
     <section className="gifts">
@@ -42,11 +26,8 @@ function Gifts({ bankName = null, accountHolder = null, cbu = null, alias = null
           ref={contentRef}
           className={`gifts-content slide-up ${contentVisible ? 'visible' : ''}`}
         >
-          <div className="gifts-icon">
-            <GiftIcon />
-          </div>
-          <h2 className="gifts-title">{currentMessages.title}</h2>
-          <p className="gifts-subtitle">{currentMessages.subtitle}</p>
+          <h2 className="gifts-title">{cardMessage.title}</h2>
+          <p className="gifts-subtitle">{cardMessage.subtitle}</p>
 
           {hasBankInfo ? (
             <div className="bank-info">

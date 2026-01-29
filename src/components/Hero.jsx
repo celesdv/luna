@@ -28,8 +28,8 @@ function Hero({ name = "Luna", eventDate, backgroundImage }) {
     >
       <div className="hero-overlay"></div>
       <div className="hero-content">
-        <h2 className="hero-subtitle-top">XV Años</h2>
         <h1 className="hero-name">{name}</h1>
+        <h2 className="hero-subtitle-top">XV Años</h2>
         {eventDate && (
           <>
             <Countdown targetDate={eventDate} />

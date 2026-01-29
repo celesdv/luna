@@ -1,0 +1,195 @@
+.gifts-mercadopago {
+  padding: 3rem 1rem;
+  background: transparent;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.gifts-mp-content {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.gifts-mp-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.25rem;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 10%, transparent) 0%, color-mix(in srgb, var(--color-secondary) 10%, transparent) 100%);
+  border-radius: 50%;
+}
+
+.gifts-mp-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.gifts-mp-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botón combinado de alias y copiar */
+.alias-copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px color-mix(in srgb, var(--color-primary) 30%, transparent);
+  cursor: pointer;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.alias-copy-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px color-mix(in srgb, var(--color-primary) 40%, transparent);
+}
+
+.alias-copy-btn:active {
+  transform: translateY(-1px);
+}
+
+.alias-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex: 1;
+  text-align: left;
+}
+
+.alias-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.alias-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.alias-copy-btn svg {
+  flex-shrink: 0;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.alias-copy-btn:hover svg {
+  opacity: 1;
+}
+
+.gifts-mp-placeholder {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 2px dashed #e0e0e0;
+}
+
+.gifts-mp-placeholder p {
+  font-size: 1rem;
+  color: #999;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .gifts-mercadopago {
+    padding: 2rem 0.75rem;
+  }
+
+  .gifts-mp-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .gifts-mp-title {
+    font-size: 1.6rem;
+  }
+
+  .gifts-mp-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .alias-copy-btn {
+    padding: 1.25rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .alias-value {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gifts-mp-content {
+    padding: 1.75rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .gifts-mp-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .gifts-mp-title {
+    font-size: 1.5rem;
+  }
+
+  .gifts-mp-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .alias-copy-btn {
+    padding: 1.125rem 1.25rem;
+    gap: 0.875rem;
+    border-radius: 12px;
+  }
+
+  .alias-label {
+    font-size: 0.75rem;
+  }
+
+  .alias-value {
+    font-size: 1.15rem;
+  }
+
+  .alias-copy-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+}

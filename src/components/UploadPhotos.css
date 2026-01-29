@@ -1,6 +1,6 @@
 .upload-photos {
   padding: 4rem 2rem;
-  background: var(--color-background);
+  background: transparent;
 }
 
 .container {
@@ -16,7 +16,7 @@
   text-align: center;
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   border-radius: 30px;
-  box-shadow: 0 15px 50px color-mix(in srgb, var(--color-primary) 30%, transparent);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.5);
   position: relative;
   overflow: hidden;
 }

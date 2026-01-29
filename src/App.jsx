@@ -2,10 +2,11 @@ import { useMemo } from 'react';
 import Hero from './components/Hero';
 import Gallery from './components/Gallery';
 import EventInfo from './components/EventInfo';
+import Gifts from './components/Gifts';
 import RSVP from './components/RSVP';
+import GiftsMercadoPago from './components/GiftsMercadoPago';
 import Playlist from './components/Playlist';
 import UploadPhotos from './components/UploadPhotos';
-import Gifts from './components/Gifts';
 import Footer from './components/Footer';
 import './App.css';
 import './animations.css';
@@ -19,6 +20,7 @@ import luna5 from './assets/images/luna5.jpeg';
 import luna6 from './assets/images/luna6.jpeg';
 import luna7 from './assets/images/luna7.jpeg';
 import luna8 from './assets/images/luna8.jpeg';
+import fondo from './assets/images/background2.jpg';
 
 function App() {
   // Detectar tipo de invitación desde URL
@@ -51,6 +53,7 @@ function App() {
     accountHolder: "Yasmin Lucia Campana", // Ejemplo: "Luna Pérez"
     cbu: "0000003100072679475203", // Ejemplo: "1234567890123456789012"
     alias: "Tarjetaluna15", // Ejemplo: "LUNA.XV.2026"
+    alias2: "celedangelo.mp", // Ejemplo: "LUNA.XV.2026"
     contactPhone: "+54 9 263 475 0617",
     // Ruta a la imagen de fondo (puede ser local o URL)
     // Por ahora usa un placeholder, cuando tengas la foto reemplázala
@@ -89,7 +92,17 @@ function App() {
   } : {};
 
   return (
-    <div className="App" style={customTheme}>
+    <div 
+      className="App" 
+      style={{
+        ...customTheme,
+        backgroundImage: `url(${fondo})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       <Hero
         name={eventData.name}
         eventDate={eventData.eventDate}
@@ -109,14 +122,16 @@ function App() {
         dressCode={eventData.dressCode}
         dressCodeDescription={eventData.dressCodeDescription}
       />
-      <Gifts
-        bankName={eventData.bankName}
-        accountHolder={eventData.accountHolder}
-        cbu={eventData.cbu}
-        alias={eventData.alias}
-        invitationType={invitationType}
-      />
+      {invitationType === 'contribution' && (
+        <Gifts
+          bankName={eventData.bankName}
+          accountHolder={eventData.accountHolder}
+          cbu={eventData.cbu}
+          alias={eventData.alias}
+        />
+      )}
       <RSVP />
+      <GiftsMercadoPago alias={eventData.alias2} />
       <Playlist spotifyPlaylistUrl={eventData.spotifyPlaylistUrl} />
       <UploadPhotos uploadPhotosUrl={eventData.uploadPhotosUrl} />
       <Footer
