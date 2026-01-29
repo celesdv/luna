@@ -54,8 +54,7 @@ function App() {
     cbu: "0000003100072679475203", // Ejemplo: "1234567890123456789012"
     alias: "Tarjetaluna15", // Ejemplo: "LUNA.XV.2026"
     alias2: "luna.campana", // Ejemplo: "LUNA.XV.2026"
-    // contactPhone: "+54 9 263 457 2907",
-    contactPhone: "+54 9 263 462 5679",
+    contactPhone: "+54 9 263 457 2907",
     // Ruta a la imagen de fondo (puede ser local o URL)
     // Por ahora usa un placeholder, cuando tengas la foto reemplázala
     backgroundImage: luna4, // Ejemplo: "/images/luna-foto.jpg" o URL
