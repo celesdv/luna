@@ -20,7 +20,7 @@ import luna5 from './assets/images/luna5.jpeg';
 import luna6 from './assets/images/luna6.jpeg';
 import luna7 from './assets/images/luna7.jpeg';
 import luna8 from './assets/images/luna8.jpeg';
-import fondo from './assets/images/background2.jpg';
+import fondo from './assets/images/background4.jpg';
 
 function App() {
   // Detectar tipo de invitación desde URL
@@ -70,14 +70,14 @@ function App() {
     uploadPhotosUrl: "https://drive.google.com/drive/folders/1lnWRWN7HRGdbmc_W4Qj9062CGXKgchBH?usp=sharing", // Reemplaza con tu URL de Drive
     // Colores del tema (opcional - si no se especifica, usa los colores por defecto)
     theme: {
-      primary: "#002366",        // Azul eléctrico vibrante
-      secondary: "#0096d6",      // Azul cyan brillante
-      accent: "#e80002",         // Rojo vibrante/rosa intenso
-      textPrimary: "#110303",    // Azul oscuro para texto principal
-      textSecondary: "#13363e",  // Rojo para texto de acento
-      textLight: "#e1e1d5",      // Azul grisáceo suave
-      background: "#FFFFFF",     // Blanco puro
-      backgroundAlt: "#efefef"   // Azul muy claro (Alice Blue)
+      primary: "#0166a5",        // Azul eléctrico vibrante
+      secondary: "#2ce9fc",      // Azul cyan brillante
+      accent: "#f8f5e6",         // Rojo vibrante/rosa intenso
+      textPrimary: "#01131e",    // Azul oscuro para texto principal
+      textSecondary: "#024369",  // Rojo para texto de acento
+      textLight: "#efefef",      // Azul grisáceo suave
+      background: "#e4f4fe",     // Blanco puro
+      backgroundAlt: "#b1e3fa"   // Azul muy claro (Alice Blue)
     }
   };
 

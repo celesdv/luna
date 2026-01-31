@@ -1,5 +1,5 @@
 .gifts {
-  padding: 3rem 1rem;
+  padding: 3rem 2rem;
   background: transparent;
 }
 
@@ -10,10 +10,10 @@
 
 .gifts-content {
   text-align: center;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 248, 230, 0.85);
   backdrop-filter: blur(10px);
-  padding: 2.5rem 2rem;
-  border-radius: 20px;
+  padding: 2.5rem;
+  border-radius: 5px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.8);
 }
@@ -63,7 +63,7 @@
 
 .bank-card {
   background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 5%, transparent) 0%, color-mix(in srgb, var(--color-secondary) 5%, transparent) 100%);
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 1.75rem 1.5rem;
   border: 1px solid color-mix(in srgb, var(--color-primary) 15%, transparent);
   text-align: left;
@@ -118,7 +118,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0.25rem 0.5rem;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 .bank-value.copy-value:hover {
@@ -138,7 +138,7 @@
 .gifts-placeholder {
   padding: 2rem;
   background: #f8f9fa;
-  border-radius: 12px;
+  border-radius: 5px;
   border: 2px dashed #e0e0e0;
 }
 
@@ -151,7 +151,7 @@
 
 @media (max-width: 768px) {
   .gifts {
-    padding: 2rem 0.75rem;
+    padding: 2rem 1.5rem;
   }
 
   .gifts-content {
@@ -197,7 +197,7 @@
 @media (max-width: 480px) {
   .gifts-content {
     padding: 1.75rem 1.25rem;
-    border-radius: 16px;
+    border-radius: 5px;
   }
 
   .gifts-icon {

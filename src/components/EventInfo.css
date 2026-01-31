@@ -1,5 +1,5 @@
 .event-info {
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   background: transparent;
   min-height: 100vh;
   display: flex;
@@ -13,10 +13,10 @@
 
 /* Card única unificada */
 .info-card-single {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 248, 230, 0.85);
   backdrop-filter: blur(10px);
-  border-radius: 30px;
-  padding: 3rem;
+  border-radius: 5px;
+  padding: 2.5rem;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.5);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(255, 255, 255, 0.8);
@@ -143,7 +143,7 @@
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
   background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 10%, transparent) 0%, color-mix(in srgb, var(--color-secondary) 10%, transparent) 100%);
-  border-radius: 12px;
+  border-radius: 4px;
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
@@ -187,7 +187,7 @@
 
 @media (max-width: 768px) {
   .event-info {
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem;
   }
 
   .container {
@@ -196,7 +196,7 @@
 
   .info-card-single {
     padding: 2rem 1.5rem;
-    border-radius: 20px;
+    border-radius: 5px;
   }
 
   .card-header h3 {
@@ -235,12 +235,12 @@
 
 @media (max-width: 480px) {
   .event-info {
-    padding: 2.5rem 0.75rem;
+    padding: 2.5rem 1.25rem;
   }
 
   .info-card-single {
     padding: 1.75rem 1.25rem;
-    border-radius: 16px;
+    border-radius: 5px;
   }
 
   .card-header {
