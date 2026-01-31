@@ -49,6 +49,14 @@
   margin-right: auto;
 }
 
+/* Precio destacado */
+.card-price {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
 .bank-info {
   margin-top: 1.5rem;
 }

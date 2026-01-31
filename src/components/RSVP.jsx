@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './RSVP.css';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
-function RSVP({ contactPhone = "+54 9 11 1234-5678" }) {
+function RSVP({ contactPhone = "+54 9 11 1234-5678", rsvpDeadline = null }) {
   const [formRef, formVisible] = useScrollAnimation();
   const [formData, setFormData] = useState({
     name: '',
@@ -89,6 +89,16 @@ function RSVP({ contactPhone = "+54 9 11 1234-5678" }) {
       <div className="container">
         <h2 className="section-title fade-down visible">Confirma tu Asistencia</h2>
         <p className="rsvp-subtitle">¿Vas a venir a celebrar con nosotros?</p>
+        
+        {rsvpDeadline && (
+          <div className="rsvp-deadline-notice">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Confirma tu asistencia antes del <strong>{rsvpDeadline}</strong></span>
+          </div>
+        )}
 
         {submitted ? (
           <div className="success-message">

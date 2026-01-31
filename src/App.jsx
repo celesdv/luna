@@ -37,6 +37,8 @@ function App() {
     name: "Luna",
     // Fecha del evento en formato ISO (YYYY-MM-DD) o Date string
     eventDate: "2026-03-27T21:00:00",
+    // Fecha límite para confirmar asistencia
+    rsvpDeadline: "20 de Marzo",
     date: "Viernes, 27 de Marzo",
     time: "21:00 hs",
     location: "María Victória, Salón de Eventos", // Nombre del salón
@@ -130,7 +132,10 @@ function App() {
           alias={eventData.alias}
         />
       )}
-      <RSVP contactPhone={eventData.contactPhone} />
+      <RSVP 
+        contactPhone={eventData.contactPhone}
+        rsvpDeadline={eventData.rsvpDeadline}
+      />
       <GiftsMercadoPago alias={eventData.alias2} />
       <Playlist spotifyPlaylistUrl={eventData.spotifyPlaylistUrl} />
       <UploadPhotos uploadPhotosUrl={eventData.uploadPhotosUrl} />

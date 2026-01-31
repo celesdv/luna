@@ -12,7 +12,9 @@ function Gifts({ bankName = null, accountHolder = null, cbu = null, alias = null
     title: 'Tarjeta',
     subtitle: (
       <>
-        Valor de la tarjeta: $25.000
+        Valor de la tarjeta para mayores de 18 años:
+        <br />
+        <span className="card-price">$25.000</span>
         <br />
         Gracias por tu colaboración.
       </>
