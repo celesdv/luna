@@ -49,7 +49,7 @@ function App() {
     dressCode: "Elegante casual",
     dressCodeDescription: "Vestite cómodo pero elegante, para que te sientas cómodo y puedas bailar.",
     // URL de la playlist de Spotify para agregar canciones
-    spotifyPlaylistUrl: "https://open.spotify.com/playlist/5cC9DxYM35vAB5RCnbwDz6?si=1b28da72d9af4d28", // Ejemplo: "https://open.spotify.com/playlist/..."
+    spotifyPlaylistUrl: "https://open.spotify.com/playlist/5cC9DxYM35vAB5RCnbwDz6?si=DUsV1nlmQ-ilxhW0nS2jbg&pt=bb84ce30898dc61b77c311efbabc2351&pi=3l7hrqWQTuuBG", // Ejemplo: "https://open.spotify.com/playlist/..."
     // Datos bancarios para regalos
     bankName: null, // Ejemplo: "Banco Nación"
     accountHolder: "Yasmin Lucia Campana", // Ejemplo: "Luna Pérez"
